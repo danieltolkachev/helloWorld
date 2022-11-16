@@ -24,5 +24,6 @@ public class PersonRestController {
     public ResponseEntity<List<Person>> fetchPersons(){
         return ResponseEntity.ok(personService.findAll());
     }
+
 }
 
