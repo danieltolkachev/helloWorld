@@ -3,27 +3,26 @@ package de.htw.webtech.hello.webtech.web;
 
 
 
+import de.htw.webtech.hello.webtech.service.PersonService;
 import de.htw.webtech.hello.webtech.web.api.Person;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 public class PersonRestController {
 
-    private List<Person> persons;
+    private final PersonService personService;
 
-    public PersonRestController(){
-        persons = new ArrayList<>();
-        persons.add(new Person(1, "Max", "Mustermann", false));
-        persons.add(new Person(1, "Frank", "Müller", true));
+    public PersonRestController(PersonService personService) {
+        this.personService = personService;
     }
+
 
     @GetMapping(path = "/api/v1/persons")
     public ResponseEntity<List<Person>> fetchPersons(){
-        return ResponseEntity.ok(persons);
+        return ResponseEntity.ok(personService.findAll());
     }
 }
 
