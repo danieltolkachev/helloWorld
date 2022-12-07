@@ -8,9 +8,7 @@ group = 'de.htw.webtech.hello'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17.0.4'
 
-compileOptions {
-	sourceCompatibility JavaVersion.VERSION_17.0.4
-}
+
 
 repositories {
 	mavenCentral()
