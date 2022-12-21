@@ -18,7 +18,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory('http://localhost:8080/api/v1/todo'),
+  linkActiveClass: 'active',
   routes
 })
 
