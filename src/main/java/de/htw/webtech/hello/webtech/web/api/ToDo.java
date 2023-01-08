@@ -5,15 +5,15 @@
     public class ToDo {
 
         private long id;
-        private String titel;
+        private String title;
         private String description;
         private LocalDate date;
         private Boolean finished;
         private Boolean favorite;
 
-        public ToDo(long id, String titel, String description, LocalDate date, Boolean finished, Boolean favorite) {
+        public ToDo(long id, String title, String description, LocalDate date, Boolean finished, Boolean favorite) {
             this.id = id;
-            this.titel = titel;
+            this.title = title;
             this.description = description;
             this.date = date;
             this.finished = finished;
@@ -46,14 +46,14 @@
             this.id = id;
         }
 
-        public String getTitel() {
+        public String getTitle() {
 
-            return titel;
+            return title;
         }
 
-        public void setTitel(String titel) {
+        public void setTitle(String title) {
 
-            this.titel = titel;
+            this.title = title;
         }
 
         public String getDescription() {

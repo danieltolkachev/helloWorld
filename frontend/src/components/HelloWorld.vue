@@ -1,40 +1,8 @@
 <template>
-  <div>
-    <input v-model="newTitle" placeholder="Neue Aufgabe eingeben" class="new-task-input">
-    <input v-model="newDescription" placeholder="Beschreibung" class="new-task-input">
-    <button @click="addTask"  class="add-task-button">Aufgabe hinzufügen</button>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
   </div>
-  <table class="table table-light">
-    <thead class="thead-light">
-    <tr>
-      <th scope="col">titel</th>
-      <th scope="col">description</th>##
-      <th scope="col">date</th>
-      <th scope="col">priority</th>
-      <th scope="col">finished</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr v-for="task in tasks" :key="task.id">
-      <td>{{task.titel}}</td>
-      <td>{{task.description}}</td>
-      <td>{{task.date}}</td>
-      <td>{{task.priority ? 'Ja' : 'Nein'}}</td>
-      <td>{{task.finished ? 'erledigt' : 'nicht erledigt'}}</td>
-    </tr>
-    </tbody>
-  </table>
 </template>
-<style>
-.new-task-input {
-  color: rgba(56,91,102,255);
-  background-color: lightgrey;
-}
-.add-task-button {
-  color: black;
-  background-color: rgba(189,218,165,255);
-}
-</style>
 
 <script>
 export default {
