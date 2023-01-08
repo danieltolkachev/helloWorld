@@ -79,7 +79,7 @@ export default {
 
         const requestOptions = {
           method: 'POST',
-          header: headers,
+          headers: headers,
           body: task,
           redirect: 'follow'
         }
