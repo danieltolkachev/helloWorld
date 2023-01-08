@@ -13,7 +13,7 @@ export default {
     }
   },
   mounted () {
-    const endpoint = 'http://localhost:8080/api/v1/todo'
+    const endpoint = 'http://localhost:8080/api/v1/task'
     console.log(endpoint)
     const requestOptions = {
       method: 'GET',

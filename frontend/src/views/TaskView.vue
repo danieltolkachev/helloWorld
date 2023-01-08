@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     addTask (taskLocation) {
-      const endpoint = 'http://localhost:8080/api/v1/todo' + taskLocation
+      const endpoint = 'http://localhost:8080/api/v1/task' + taskLocation
       const requestOptions = {
         method: 'GET',
         redirect: 'follow'
@@ -37,7 +37,7 @@ export default {
     }
   },
   mounted () {
-    const endpoint = 'http://localhost:8080/api/v1/todo'
+    const endpoint = 'http://localhost:8080/api/v1/task'
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'

@@ -67,7 +67,7 @@ export default {
   name: 'TaskCreateForm',
   data () {
     return {
-      title: '',
+      taskTitle: '',
       description: '',
       gender: '',
       favorite: false,
@@ -79,7 +79,7 @@ export default {
   methods: {
     async createTask () {
       if (this.validate()) {
-        const endpoint = 'http://localhost:8080/api/v1/todo'
+        const endpoint = 'http://localhost:8080/api/v1/task'
 
         const headers = new Headers()
         headers.append('Content-Type', 'application/json')
@@ -93,7 +93,7 @@ export default {
 
         const requestOptions = {
           method: 'POST',
-          headers: headers,
+          headers,
           body: task,
           redirect: 'follow'
         }

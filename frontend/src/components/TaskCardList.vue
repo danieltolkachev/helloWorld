@@ -10,7 +10,7 @@
 import TaskCard from '@/components/TaskCard'
 
 export default {
-  name: 'TaskCardBuild',
+  name: 'TaskCardList',
   components: { TaskCard },
   props: {
     tasks: {
