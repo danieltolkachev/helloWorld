@@ -2,7 +2,6 @@
   <table class="table table-light">
     <thead class="thead-light">
     <tr>
-      <th scope="col">id</th>
       <th scope="col">titel</th>
       <th scope="col">description</th>
       <th scope="col">date</th>
@@ -12,11 +11,10 @@
     </thead>
     <tbody>
     <tr v-for="task in tasks" :key="task.id">
-      <th scope="row">{{task.id}}</th>
       <td>{{task.titel}}</td>
       <td>{{task.description}}</td>
       <td>{{task.date}}</td>
-      <td>{{task.priority ? 'erledigt' : 'nicht erledigt'}}</td>
+      <td>{{task.priority ? 'Ja' : 'Nein'}}</td>
       <td>{{task.finished ? 'erledigt' : 'nicht erledigt'}}</td>
     </tr>
     </tbody>
@@ -25,7 +23,7 @@
 
 <script>
 export default {
-    name: 'HelloWorld',
+  name: 'HelloWorld',
   data () {
     return {
       tasks: []

@@ -1,5 +1,5 @@
 <template>
-  <h1>ToDo Projekt</h1>
+  <h1> </h1>
   <div class="container-fluid">
   <hello-world></hello-world>
   </div>
