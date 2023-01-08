@@ -71,7 +71,7 @@ export default {
         headers.append('Content-Type', 'application/json')
 
         const task = JSON.stringify({
-          title: this.title,
+          title: this.taskTitle,
           description: this.description,
           favorite: this.favorite
         })
