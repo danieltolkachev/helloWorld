@@ -1,4 +1,4 @@
-/*
+
 package de.htw.webtech.hello.webtech;
 
 import org.junit.jupiter.api.Test;
@@ -13,5 +13,3 @@ class HelloWorldApplicationTests {
 
 }
 
-
- */
