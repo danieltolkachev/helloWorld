@@ -1,8 +1,8 @@
 <template>
   <div>
-    <input v-model="newTitle" placeholder="Neue Aufgabe eingeben">
-    <input v-model="newDescription" placeholder="Beschreibung">
-    <button @click="addTask">Aufgabe hinzufügen</button>
+    <input v-model="newTitle" placeholder="Neue Aufgabe eingeben" class="new-task-input">
+    <input v-model="newDescription" placeholder="Beschreibung" class="new-task-input">
+    <button @click="addTask"  class="add-task-button">Aufgabe hinzufügen</button>
   </div>
   <table class="table table-light">
     <thead class="thead-light">
@@ -25,6 +25,16 @@
     </tbody>
   </table>
 </template>
+<style>
+.new-task-input {
+  color: rgba(56,91,102,255);
+  background-color: lightgrey;
+}
+.add-task-button {
+  color: black;
+  background-color: rgba(189,218,165,255);
+}
+</style>
 
 <script>
 export default {
