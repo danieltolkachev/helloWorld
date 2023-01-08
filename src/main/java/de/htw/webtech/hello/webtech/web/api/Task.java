@@ -2,38 +2,18 @@
 
     import java.time.LocalDate;
 
-    public class ToDo {
+    public class Task {
 
         private long id;
         private String title;
         private String description;
-        private LocalDate date;
-        private Boolean finished;
         private Boolean favorite;
 
-        public ToDo(long id, String title, String description, LocalDate date, Boolean finished, Boolean favorite) {
+        public Task(long id, String title, String description, Boolean favorite) {
             this.id = id;
             this.title = title;
             this.description = description;
-            this.date = date;
-            this.finished = finished;
             this.favorite = favorite;
-        }
-
-        public LocalDate getDate() {
-            return date;
-        }
-
-        public void setDate(LocalDate date) {
-            this.date = date;
-        }
-
-        public Boolean isFinished() {
-            return finished;
-        }
-
-        public void setFinished(Boolean finished) {
-            this.finished = finished;
         }
 
         public long getId() {

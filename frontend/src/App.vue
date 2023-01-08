@@ -1,6 +1,6 @@
 <template>
   <body> </body>
-  <html style="background-color: rgba(0,0,0,0);width: 100%; height: 100%;">
+  <html style="background-color: rgba(56,91,102,255);width: 100%; height: 100%;">
   <a><img src="https://i.ibb.co/4NTr7xT/logo.png" alt="logo" style="width: 15%; height: 10%;"></a>
   <nav>
     <router-link to="/tasks">Tasks</router-link> |
@@ -12,7 +12,7 @@
 
 <style>
 nav {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(189,218,165,255);
   display: compact;
   justify-content: space-between;
 }
@@ -23,7 +23,7 @@ nav a {
   padding: 10px 20px;
 }
 nav a:hover {
-  background-color: rgba(0,0,0,0);
-  color: rgba(0,0,0,0);
+  background-color: rgba(56,91,102,255);
+  color: rgba(189,218,165,255);
 }
 </style>

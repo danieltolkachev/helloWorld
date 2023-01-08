@@ -19,8 +19,8 @@
             </div>
           </div>
           <div class="mb-3">
-            <label for="last-name" class="form-label">Last name</label>
-            <input type="text" class="form-control" id="last-name" v-model="description" required>
+            <label for="descrpition" class="form-label">Task Description: </label>
+            <input type="text" class="form-control" id="description" v-model="description" required>
             <div class="invalid-feedback">
               Please provide the last name.
             </div>

@@ -1,18 +1,17 @@
 package de.htw.webtech.hello.webtech.persistence;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Entity(name = "toDos")
-public class ToDoEntity {
+public class TaskEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "titel", nullable = false)
-    private String titel;
+    @Column(name = "title", nullable = false)
+    private String title;
 
     @Column(name = "description", nullable = false)
     private String description;
@@ -26,27 +25,27 @@ public class ToDoEntity {
     @Column(name = "is_favorite")
     private Boolean favorite;
 
-    public ToDoEntity(String titel, String description, LocalDate date, Boolean finished, Boolean favorite) {
+    public TaskEntity(String title, String description, Boolean favorite) {
 
-        this.titel = titel;
+        this.title = title;
         this.description = description;
         this.date = date;
         this.finished = finished;
         this.favorite = favorite;
     }
 
-    protected ToDoEntity() {    }
+    protected TaskEntity() {    }
 
     public Long getId() {
         return id;
     }
 
-    public String getTitel() {
-        return titel;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitel(String titel) {
-        this.titel = titel;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
