@@ -9,7 +9,7 @@
         <h5 id="offcanvas-label">New Task</h5>
       </div>
       <div class="offcanvas-body">
-        <form class="text-start needs-validation" id="tasks-create-form" novalidate>
+        <form class="text-start needs-validation" id="task-create-form" novalidate>
           <div class="mb-3">
             <label for="title" class="form-label">Task Title: </label>
             <input type="text" class="form-control" id="title" v-model="taskTitle" required>
@@ -18,7 +18,7 @@
             </div>
           </div>
           <div class="mb-3">
-            <label for="descrpition" class="form-label">Task Description: </label>
+            <label for="description" class="form-label">Task Description: </label>
             <input type="text" class="form-control" id="description" v-model="description" required>
             <div class="invalid-feedback">
               Please enter a Task Description
@@ -40,8 +40,8 @@
             </ul>
           </div>
           <div class="mt-5">
-            <button class="btn btn-primary me-3" type="submit" @click.prevent="createTask">Create</button>
-            <button class="btn btn-danger" type="reset">Reset</button>
+            <button class="btn btn-primary me-3 text-reset" type="submit" @click.prevent="createTask">Create</button>
+            <button class="btn btn-danger text-reset" type="reset">Reset</button>
           </div>
         </form>
       </div>
@@ -64,7 +64,8 @@ export default {
   emits: ['created'],
   methods: {
     async createTask () {
-      if (this.validate()) {
+      const valid = this.validate()
+      if (valid) {
         const endpoint = 'http://localhost:8080/api/v1/task'
 
         const headers = new Headers()
@@ -78,7 +79,7 @@ export default {
 
         const requestOptions = {
           method: 'POST',
-          headers,
+          header: headers,
           body: task,
           redirect: 'follow'
         }

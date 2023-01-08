@@ -29,8 +29,8 @@ public class TaskRestController {
 
     @GetMapping(path = "/api/v1/task/{id}")
     public ResponseEntity<Task> fetchTaskById(@PathVariable Long id) {
-        var toDo = taskService.findById(id);
-        return toDo != null? ResponseEntity.ok(toDo) : ResponseEntity.notFound().build();
+        var task = taskService.findById(id);
+        return task != null? ResponseEntity.ok(task) : ResponseEntity.notFound().build();
     }
 
     @PostMapping(path = "/api/v1/task")
