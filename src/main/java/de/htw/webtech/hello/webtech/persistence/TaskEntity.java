@@ -16,12 +16,6 @@ public class TaskEntity {
     @Column(name = "description", nullable = false)
     private String description;
 
-    @Column(name = "date", nullable = false)
-    private LocalDate date;
-
-    @Column(name = "is_finished")
-    private Boolean finished;
-
     @Column(name = "is_favorite")
     private Boolean favorite;
 
@@ -29,8 +23,6 @@ public class TaskEntity {
 
         this.title = title;
         this.description = description;
-        this.date = date;
-        this.finished = finished;
         this.favorite = favorite;
     }
 
@@ -54,22 +46,6 @@ public class TaskEntity {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
-    public void setFinished(Boolean finished) {
-        this.finished = finished;
-    }
-
-    public Boolean getFinished() {
-        return finished;
     }
 
     public void setFavorite(Boolean favorite) {

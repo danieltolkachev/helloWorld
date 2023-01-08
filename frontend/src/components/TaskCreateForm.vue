@@ -7,41 +7,28 @@
     <div class="offcanvas offcanvas-end" tabindex="-1" id="task-create-offcanvas" aria-labelledby="offcanvas-label">
       <div class="offcanvas-header">
         <h5 id="offcanvas-label">New Task</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <form class="text-start needs-validation" id="tasks-create-form" novalidate>
           <div class="mb-3">
-            <label for="first-name" class="form-label">First name</label>
-            <input type="text" class="form-control" id="first-name" v-model="title" required>
+            <label for="title" class="form-label">Task Title: </label>
+            <input type="text" class="form-control" id="title" v-model="taskTitle" required>
             <div class="invalid-feedback">
-              Please provide the first name.
+              Please enter a Task Title
             </div>
           </div>
           <div class="mb-3">
             <label for="descrpition" class="form-label">Task Description: </label>
             <input type="text" class="form-control" id="description" v-model="description" required>
             <div class="invalid-feedback">
-              Please provide the last name.
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="gender" class="form-label">Gender</label>
-            <select id="gender" class="form-select" v-model="gender" required>
-              <option value="" selected disabled>Choose...</option>
-              <option value="MALE">Male</option>
-              <option value="FEMALE">Female</option>
-              <option value="DIVERSE">Diverse</option>
-            </select>
-            <div class="invalid-feedback">
-              Please select a valid gender.
+              Please enter a Task Description
             </div>
           </div>
           <div class="mb-3">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="vaccinated" v-model="favorite">
-              <label class="form-check-label" for="vaccinated">
-                Vaccinated
+              <input class="form-check-input" type="checkbox" id="Favorite" v-model="favorite">
+              <label class="form-check-label" for="Favorite">
+                Favorite?
               </label>
             </div>
           </div>
@@ -69,7 +56,6 @@ export default {
     return {
       taskTitle: '',
       description: '',
-      gender: '',
       favorite: false,
       serverValidationMessages: []
     }
@@ -85,10 +71,9 @@ export default {
         headers.append('Content-Type', 'application/json')
 
         const task = JSON.stringify({
-          firstName: this.title,
-          lastName: this.description,
-          vaccinated: this.favorite,
-          gender: this.gender
+          title: this.title,
+          description: this.description,
+          favorite: this.favorite
         })
 
         const requestOptions = {
