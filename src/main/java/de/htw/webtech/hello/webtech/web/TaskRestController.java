@@ -35,16 +35,16 @@ public class TaskRestController {
 
     @PostMapping(path = "/api/v1/task")
     public ResponseEntity<Void> createTask(@RequestBody TaskManipulationRequest request) throws URISyntaxException {
-        var toDo   = taskService.create(request);
-        URI uri = new URI("/api/v1/task" + toDo.getId());
+        var task   = taskService.create(request);
+        URI uri = new URI("/api/v1/task" + task.getId());
         return ResponseEntity.created(uri).build();
     }
 
 
     @PutMapping(path = "/api/v1/task/{id}")
     public ResponseEntity<Task> updateTask(@PathVariable Long id, @RequestBody TaskManipulationRequest request) {
-        var toDo = taskService.update(id, request);
-        return toDo != null? ResponseEntity.ok(toDo) : ResponseEntity.notFound().build();
+        var task = taskService.update(id, request);
+        return task != null? ResponseEntity.ok(task) : ResponseEntity.notFound().build();
     }
 
     @DeleteMapping(path = "/api/v1/task/{id}")
