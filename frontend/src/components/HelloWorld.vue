@@ -1,9 +1,14 @@
 <template>
+  <div>
+    <input v-model="newTitle" placeholder="Neue Aufgabe eingeben">
+    <input v-model="newDescription" placeholder="Beschreibung">
+    <button @click="addTask">Aufgabe hinzufügen</button>
+  </div>
   <table class="table table-light">
     <thead class="thead-light">
     <tr>
       <th scope="col">titel</th>
-      <th scope="col">description</th>
+      <th scope="col">description</th>##
       <th scope="col">date</th>
       <th scope="col">priority</th>
       <th scope="col">finished</th>

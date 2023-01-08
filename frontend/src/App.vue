@@ -1,6 +1,7 @@
 <template>
-  <html style="background-color: white;">
-  <a><img src="https://i.ibb.co/5GHCzJY/Do-IT-removebg-preview.png" alt="Do-IT-removebg-preview" style="width: 15%; height: 10%;"></a>
+  <body> </body>
+  <html style="background-color: rgba(56,91,102,255);width: 100%; height: 100%;">
+  <a><img src="https://i.ibb.co/4NTr7xT/logo.png" alt="logo" style="width: 15%; height: 10%;"></a>
   <nav>
     <router-link to="/">Tasks</router-link> |
     <router-link to="/about">About</router-link>
@@ -11,7 +12,7 @@
 
 <style>
 nav {
-  background-color: wheat;
+  background-color: rgba(189,218,165,255);
   display: compact;
   justify-content: space-between;
 }
@@ -22,7 +23,7 @@ nav a {
   padding: 10px 20px;
 }
 nav a:hover {
-  background-color: black;
-  color: wheat;
+  background-color: rgba(56,91,102,255);
+  color: rgba(189,218,165,255);
 }
 </style>
